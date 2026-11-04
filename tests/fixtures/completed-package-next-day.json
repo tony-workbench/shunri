@@ -1,0 +1,49 @@
+{
+  "2026-10-12": [
+    {
+      "id": "completed-original-day",
+      "uid": "completed-original-day",
+      "title": "completed-original-day",
+      "start": 660,
+      "duration": 150,
+      "rest": 20,
+      "type": "task",
+      "done": true,
+      "locked": false,
+      "deferred": false,
+      "tags": [
+        "study"
+      ],
+      "planId": "course",
+      "packageId": "2026-10-12",
+      "packageOriginDate": "2026-10-12",
+      "packageOrder": 0,
+      "packageTaskOrder": 0,
+      "dependencies": [],
+      "completedDate": "2026-10-12"
+    }
+  ],
+  "2026-10-13": [
+    {
+      "id": "selected-next-package",
+      "uid": "selected-next-package",
+      "title": "selected-next-package",
+      "start": 660,
+      "duration": 45,
+      "rest": 20,
+      "type": "task",
+      "done": false,
+      "locked": false,
+      "deferred": false,
+      "tags": [
+        "study"
+      ],
+      "planId": "course",
+      "packageId": "2026-10-13",
+      "packageOriginDate": "2026-10-13",
+      "packageOrder": 1,
+      "packageTaskOrder": 0,
+      "dependencies": []
+    }
+  ]
+}

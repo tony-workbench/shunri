@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#F8FAF7" />
+    <title>Shunri · Plans that move with life</title>
+    <link rel="icon" href="/assets/shunri.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header class="workbench-header">
+      <strong class="workbench-brand">Shunri</strong>
+      <button id="wb-calendar">
+        <img
+          src="/assets/google-calendar.png"
+          width="20"
+          height="20"
+          alt=""
+        /><span>Google Calendar · Checking</span>
+      </button>
+      <span id="wb-calendar-label" class="muted" hidden></span>
+    </header>
+    <main class="workbench-main">
+      <p id="wb-notice" role="status" hidden></p>
+      <p id="wb-refresh-notice" class="reading-note" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+      <div id="workbench"></div>
+    </main>
+  </body>
+</html>

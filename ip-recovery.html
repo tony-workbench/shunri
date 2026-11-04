@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Shunri · Old-address schedule export</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #243234; background: #f5f4ee; }
+    body { max-width: 36rem; margin: 0 auto; padding: 2rem 1.25rem; line-height: 1.65; }
+    h1 { font-size: 1.5rem; line-height: 1.35; }
+    h1, p, button, a { overflow-wrap: anywhere; }
+    button, a { font: inherit; }
+    button { max-width: 100%; white-space: normal; padding: .7rem 1rem; border: 1px solid #46674b; border-radius: .6rem; color: white; background: #365e40; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #ba701e; outline-offset: 3px; }
+    a { color: #285a40; }
+    #recovery-status { min-height: 3.3em; }
+  </style>
+  <main>
+    <h1>Old-address schedule export</h1>
+    <p>This exports only the raw copy this browser saved at the old address. Nothing is moved or deleted. The file is not validated, and it may fail to import if it is damaged or larger than 5 MB.</p>
+    <p>Import it in Backup and restore at localhost. Import still needs review and confirmation of whole-workspace replacement; it never merges with existing data.</p>
+    <button id="download-original" type="button">Download original data copy</button>
+    <p id="recovery-status" role="status" aria-live="polite"></p>
+    <p><a id="return-localhost">Go to Shunri (localhost)</a></p>
+  </main>
+  <script>
+    const returnUrl = new URL(location.origin);
+    returnUrl.hostname = "localhost";
+    returnUrl.pathname = "/";
+    document.getElementById("return-localhost").href = returnUrl.href;
+    const status = document.getElementById("recovery-status");
+    document.getElementById("download-original").addEventListener("click", () => {
+      let original;
+      try {
+        original = {
+          "shunri.workspace.v2": localStorage.getItem("shunri.workspace.v2"),
+          "shunri.days.v1": localStorage.getItem("shunri.days.v1"),
+        };
+      } catch {
+        status.textContent = "The browser did not allow reading local data. Nothing was exported.";
+        return;
+      }
+      if (Object.values(original).every((value) => value === null)) {
+        status.textContent = "No saved data was found at this address. Check the original browser and port.";
+        return;
+      }
+      let objectUrl;
+      try {
+        const blob = new Blob([JSON.stringify({ format: "shunri-raw-recovery", original }, null, 2)], { type: "application/json" });
+        objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = objectUrl;
+        link.download = "shunri-ip-original.json";
+        document.body.append(link);
+        link.click();
+        link.remove();
+        status.textContent = "Download requested. Check the browser download list or notification.";
+      } catch {
+        status.textContent = "The download could not start. The original data is unchanged.";
+      } finally {
+        if (objectUrl) setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,11 @@
+.context/
+.local-data/
+.env
+node_modules/
+*.log
+# Per-machine preview launch config (absolute paths, session scratchpads)
+.claude/launch.json
+# AI coding skills (gstack) are installed per machine, not kept in the repo;
+# see "AI coding skills" in README.md
+/.agents/
+/.claude/skills/

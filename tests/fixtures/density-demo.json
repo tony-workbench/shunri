@@ -1,0 +1,348 @@
+{
+  "version": 2,
+  "revision": 1,
+  "profileId": "2a45f805-66d8-49c7-88c4-37e60e46c3c1",
+  "personal": {
+    "days": {},
+    "settings": {
+      "rulesVersion": 1,
+      "ruleSources": {
+        "dayStart": "user-spec-2026-10-10",
+        "dayEnd": "user-spec-2026-10-10",
+        "timeZone": "user-spec-2026-10-10",
+        "learningCapacity": "user-spec-2026-10-10",
+        "learningMinGap": "user-spec-2026-10-10",
+        "learningPreferredStart": "user-spec-2026-10-10",
+        "fixedProtection": "user-spec-2026-10-10"
+      },
+      "dayStart": 540,
+      "dayEnd": 1380,
+      "bufferBefore": 0,
+      "bufferAfter": 0,
+      "timeZone": "America/Los_Angeles",
+      "minGap": 0,
+      "capacity": null,
+      "learningCapacity": 150,
+      "learningMinGap": 20,
+      "learningPreferredStart": 660,
+      "learningDates": {},
+      "weekly": {
+        "0": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "1": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "2": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "3": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "4": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "5": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "6": [
+          [
+            540,
+            1380
+          ]
+        ]
+      },
+      "dates": {}
+    },
+    "daySettings": {},
+    "undo": null
+  },
+  "demo": {
+    "days": {
+      "2026-10-12": [
+        {
+          "id": "70d5daba-fc41-4beb-8c0c-97cc49cb5a03",
+          "uid": "170cf9e3-d8ab-48fc-93a9-e65b6d347e65",
+          "title": "SQL · ROW_NUMBER lesson (completed)",
+          "start": 600,
+          "duration": 30,
+          "rest": 0,
+          "done": true,
+          "locked": false,
+          "deferred": false,
+          "type": "task",
+          "counted": false,
+          "dependencies": [],
+          "bufferBefore": 60,
+          "bufferAfter": 60,
+          "tags": [
+            "study"
+          ],
+          "planId": "example-study",
+          "packageId": "demo-package-A",
+          "packageOrder": 0,
+          "packageOriginDate": "2026-10-12",
+          "packageTaskOrder": 0,
+          "doneAt": "2026-10-12T17:30:00Z",
+          "completedDate": "2026-10-12"
+        },
+        {
+          "id": "f6100fec-cb90-4cf4-87af-3b05bd1d0009",
+          "uid": "b57d964b-aa66-40b7-9585-832db3ef3679",
+          "title": "SQL practice · ROW_NUMBER",
+          "start": 660,
+          "duration": 45,
+          "rest": 15,
+          "done": false,
+          "locked": false,
+          "deferred": false,
+          "type": "task",
+          "counted": false,
+          "dependencies": [
+            {
+              "id": "70d5daba-fc41-4beb-8c0c-97cc49cb5a03",
+              "gap": 0
+            }
+          ],
+          "bufferBefore": 60,
+          "bufferAfter": 60,
+          "tags": [
+            "study"
+          ],
+          "planId": "example-study",
+          "packageId": "demo-package-A",
+          "packageOrder": 0,
+          "packageOriginDate": "2026-10-12",
+          "packageTaskOrder": 1
+        },
+        {
+          "id": "74a78231-06e1-473c-bebe-7df46cc2d867",
+          "uid": "229a8aba-e499-49da-b623-b97686adb7a2",
+          "title": "Badminton · fixed activity",
+          "start": 1020,
+          "duration": 60,
+          "rest": 0,
+          "done": false,
+          "locked": true,
+          "deferred": false,
+          "type": "activity",
+          "counted": false,
+          "dependencies": [],
+          "bufferBefore": 60,
+          "bufferAfter": 60
+        }
+      ],
+      "2026-10-13": [
+        {
+          "id": "cec8f216-5b34-4ba0-9831-c3cac0a8a105",
+          "uid": "53de9e1e-6fd5-45da-9c22-c35a4c183ae0",
+          "title": "Python practice · lists and loops",
+          "start": 660,
+          "duration": 60,
+          "rest": 15,
+          "done": false,
+          "locked": false,
+          "deferred": false,
+          "type": "task",
+          "counted": false,
+          "dependencies": [
+            {
+              "id": "f6100fec-cb90-4cf4-87af-3b05bd1d0009",
+              "gap": 0
+            }
+          ],
+          "bufferBefore": 60,
+          "bufferAfter": 60,
+          "tags": [
+            "study"
+          ],
+          "planId": "example-study",
+          "packageId": "demo-package-B",
+          "packageOrder": 1,
+          "packageOriginDate": "2026-10-13",
+          "packageTaskOrder": 0
+        }
+      ],
+      "2026-10-15": [
+        {
+          "id": "214d3b58-5f29-400d-9267-db17bb686f38",
+          "uid": "15d22d3d-e758-42ad-b0ff-a7ebe71b5f47",
+          "title": "Study review · organize this week's notes",
+          "start": 660,
+          "duration": 60,
+          "rest": 15,
+          "done": false,
+          "locked": false,
+          "deferred": false,
+          "type": "task",
+          "counted": false,
+          "dependencies": [
+            {
+              "id": "cec8f216-5b34-4ba0-9831-c3cac0a8a105",
+              "gap": 0
+            }
+          ],
+          "bufferBefore": 60,
+          "bufferAfter": 60,
+          "tags": [
+            "study"
+          ],
+          "planId": "example-study",
+          "packageId": "demo-package-C",
+          "packageOrder": 2,
+          "packageOriginDate": "2026-10-15",
+          "packageTaskOrder": 0
+        }
+      ]
+    },
+    "settings": {
+      "rulesVersion": 1,
+      "ruleSources": {
+        "dayStart": "user-spec-2026-10-10",
+        "dayEnd": "user-spec-2026-10-10",
+        "timeZone": "user-spec-2026-10-10",
+        "learningCapacity": "user-spec-2026-10-10",
+        "learningMinGap": "user-spec-2026-10-10",
+        "learningPreferredStart": "user-spec-2026-10-10",
+        "fixedProtection": "user-spec-2026-10-10"
+      },
+      "dayStart": 540,
+      "dayEnd": 1380,
+      "bufferBefore": 0,
+      "bufferAfter": 0,
+      "timeZone": "America/Los_Angeles",
+      "minGap": 0,
+      "capacity": null,
+      "learningCapacity": 150,
+      "learningMinGap": 20,
+      "learningPreferredStart": 660,
+      "learningDates": {
+        "2026-10-14": {
+          "closed": true
+        }
+      },
+      "weekly": {
+        "0": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "1": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "2": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "3": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "4": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "5": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "6": [
+          [
+            540,
+            1380
+          ]
+        ]
+      },
+      "dates": {},
+      "learningWeekly": {
+        "0": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "1": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "2": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "3": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "4": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "5": [
+          [
+            540,
+            1380
+          ]
+        ],
+        "6": [
+          [
+            540,
+            1380
+          ]
+        ]
+      }
+    },
+    "daySettings": {},
+    "undo": null,
+    "exampleOrigin": "2026-10-12"
+  },
+  "ui": {
+    "mode": "demo",
+    "date": "2026-10-12",
+    "personalDateBeforeDemo": null,
+    "personalViewBeforeDemo": {
+      "selectedId": null,
+      "query": "",
+      "page": 0,
+      "draft": null
+    },
+    "dayAtOpen": "2026-10-10"
+  }
+}
